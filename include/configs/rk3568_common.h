@@ -11,6 +11,9 @@
 #include "rockchip-common.h"
 
 #define CFG_IRAM_BASE		0xfdcc0000
+#define CONFIG_SPL_BSS_START_ADDR	0x03fe0000
+#define CONFIG_SPL_STACK		0x03fe0000
+#define CONFIG_SPL_MAX_FOOTPRINT	32768
 
 #define CFG_SYS_SDRAM_BASE		0
 #define SDRAM_MAX_SIZE			0xf0000000

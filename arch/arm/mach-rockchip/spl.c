@@ -139,3 +139,10 @@ void board_init_f(ulong dummy)
 #endif
 	preloader_console_init();
 }
+
+#ifdef CONFIG_SPL_BOARD_INIT
+void spl_board_init(void)
+{
+    return;
+}
+#endif
