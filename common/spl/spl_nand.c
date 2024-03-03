@@ -17,6 +17,10 @@
 #include <linux/libfdt_env.h>
 #include <fdt.h>
 
+#ifndef CONFIG_SYS_NAND_U_BOOT_OFFS
+#define CONFIG_SYS_NAND_U_BOOT_OFFS 0x8000
+#endif
+
 uint32_t __weak spl_nand_get_uboot_raw_page(void)
 {
 	return CONFIG_SYS_NAND_U_BOOT_OFFS;

@@ -15,6 +15,9 @@
 #define CFG_SYS_SDRAM_BASE		0
 #define SDRAM_MAX_SIZE			0xf0000000
 
+#define CFG_SYS_INIT_RAM_ADDR        0x40000000
+#define CFG_SYS_INIT_RAM_SIZE        SDRAM_MAX_SIZE
+
 #define ENV_MEM_LAYOUT_SETTINGS		\
 	"scriptaddr=0x00c00000\0"	\
 	"script_offset_f=0xffe000\0"	\
