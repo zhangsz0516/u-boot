@@ -10,7 +10,7 @@
 #include "rockchip-common.h"
 
 #define CFG_IRAM_BASE			0xff000000
-
+#define CONFIG_SYS_TEXT_BASE		0x00200000
 #define CFG_SYS_SDRAM_BASE		0
 #define SDRAM_MAX_SIZE			0xf0000000
 

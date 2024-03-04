@@ -11,8 +11,8 @@ SUPPORT_LIST=`ls configs/*[r,p][x,v,k][0-9][0-9]*_defconfig`
 CMD_ARGS=$1
 
 ########################################### User can modify #############################################
-# RKBIN_TOOLS=../rkbin/tools
-RKBIN_TOOLS=/home/zhangsz/rk3568/rkbin
+RKBIN_TOOLS=../rkbin/tools
+# RKBIN_TOOLS=/home/zhangsz/rk3568/rkbin/tools
 CROSS_COMPILE_ARM32=../prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
 # CROSS_COMPILE_ARM64=../prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
 CROSS_COMPILE_ARM64=/home/zhangsz/tools/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu/bin/aarch64-linux-gnu-
