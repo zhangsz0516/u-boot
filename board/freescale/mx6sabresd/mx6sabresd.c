@@ -83,7 +83,8 @@ static iomux_v3_cfg_t const usdhc2_pads[] = {
 	IOMUX_PADS(PAD_NANDF_D5__SD2_DATA5	| MUX_PAD_CTRL(USDHC_PAD_CTRL)),
 	IOMUX_PADS(PAD_NANDF_D6__SD2_DATA6	| MUX_PAD_CTRL(USDHC_PAD_CTRL)),
 	IOMUX_PADS(PAD_NANDF_D7__SD2_DATA7	| MUX_PAD_CTRL(USDHC_PAD_CTRL)),
-	IOMUX_PADS(PAD_NANDF_D2__GPIO2_IO02	| MUX_PAD_CTRL(NO_PAD_CTRL)), /* CD */
+	//IOMUX_PADS(PAD_NANDF_D2__GPIO2_IO02	| MUX_PAD_CTRL(NO_PAD_CTRL)), /* CD */
+    IOMUX_PADS(PAD_GPIO_4__GPIO1_IO04	| MUX_PAD_CTRL(NO_PAD_CTRL)), /* mx6q-topeet CD */
 };
 
 static iomux_v3_cfg_t const usdhc3_pads[] = {
@@ -511,6 +512,7 @@ int board_init(void)
 
 int power_init_board(void)
 {
+#ifdef CONFIG_POWER_PFUZE100
 	struct pmic *p;
 	unsigned int reg;
 	int ret;
@@ -534,7 +536,7 @@ int power_init_board(void)
 	reg &= ~LDO_VOL_MASK;
 	reg |= LDOB_3_00V;
 	pmic_reg_write(p, PFUZE100_VGEN5VOL, reg);
-
+#endif
 	return 0;
 }
 
