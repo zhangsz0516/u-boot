@@ -379,7 +379,7 @@ config TARGET_MX6SABREAUTO
 
 config TARGET_MX6SABRESD
 	bool "mx6sabresd"
-	depends on MX6QDL
+	depends on MX6Q
 	select BOARD_EARLY_INIT_F
 	select BOARD_LATE_INIT
 	select DM
